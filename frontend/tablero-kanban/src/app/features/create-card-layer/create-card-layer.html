@@ -1,0 +1,5 @@
+<div class="absolute bg-[#eee8] backdrop-blur-xs w-sm lg:w-lg h-auto z-2 flex top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg">
+  @if (form) {
+    <app-create-board-form (createdBoard)="submitted.emit($event)" class="m-auto"></app-create-board-form>
+  }
+</div>

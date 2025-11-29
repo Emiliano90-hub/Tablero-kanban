@@ -1,1 +1,8 @@
-<p>sidebar works!</p>
+<nav class="h-auto p-4">
+  <button class="">x</button>
+  <ul class="flex flex-col space-y-2">
+    <li><button (click)="select(SidebarOption.Board)">New Board</button></li>
+    <li><button (click)="select(SidebarOption.Column)">New Column</button></li>
+    <li><button (click)="select(SidebarOption.Task)">New Task</button></li>
+  </ul>
+</nav>

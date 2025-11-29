@@ -1,1 +1,13 @@
-<p>dashboard works!</p>
+<div class="min-h-full grid grid-cols-8">
+  <app-sidebar class="bg-orange-600 col-span-2 lg:col-span-1" (selectComponent)="showComponent($event)"></app-sidebar>
+  <div class="bg-[#48e] col-span-6 lg:col-span-7 h-[80vh] overflow-y-auto">
+    @if (currentComponent) {
+      <app-create-card-layer [component]="currentComponent" (submitted)="handleCreatedBoard($event)"></app-create-card-layer>
+    }
+    @if (option) {
+      @for (board of boards; track $index) {
+        <app-board [boardName]="board.name"></app-board>
+      }
+    }
+  </div>
+</div>
